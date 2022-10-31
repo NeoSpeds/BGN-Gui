@@ -2372,7 +2372,7 @@ Player.Chatted:Connect(function(Message)
 		MoneyScriptLaunched.Visible = false
 		wait(2)
 		CharacterRefreshed.Visible = false
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/KazeOnTop/Rice-Anti-Afk/main/Wind", true))()
+game.ReplicatedStorage.GeneralEvents.Spawn:FireServer()
 	end
 end)
 
