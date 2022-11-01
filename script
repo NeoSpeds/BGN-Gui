@@ -1,3 +1,9 @@
+--
+
+-- // Blitzkrieg Brigade Commands V1.0
+
+-- // UI
+
 local ScriptUI = Instance.new("ScreenGui")
 local Instructions = Instance.new("TextLabel")
 local Loaded = Instance.new("TextLabel")
@@ -416,6 +422,8 @@ TextLabel_13.TextSize = 14
 TextLabel_13.TextWrapped = true
 TextLabel_13.Draggable = true
 
+-- // Variables
+
 local Player = game:GetService("Players").LocalPlayer
 
 Loaded.Visible = true
@@ -425,6 +433,8 @@ Loaded.Visible = false
 Close.MouseButton1Click:Connect(function()
 Commands.Visible = false
 end)
+
+-- // Commands
 
 Player.Chatted:Connect(function(Message)
 	if Message:sub(1,5):lower() == ".cmds" then
@@ -438,25 +448,27 @@ Player.Chatted:Connect(function(Message)
 	end
 end)
 
+-- // Auto Farm
+
 Player.Chatted:Connect(function(Message)
-	if Message:sub(1,17):lower() == ".activateautofarm" then
-AnimalESPLoaded.Visible = false
-AntiAFKLoaded.Visible = false
-AntiCharDisablerLoaded.Visible = false
-AntiLassoLoaded.Visible = false
-CMDXLoaded.Visible = false
-ChatBypassLoaded.Visible = false
-BlitzkriegBrigadeUILoaded.Visible = false
-CharacterRefreshed.Visible = false
-Instructions.Visible = true
-DisplayNamesRemoved.Visible = false
-Loaded.Visible = false
-MoneyScriptActivated.Visible = true
-MoneyScriptLaunched.Visible = false
-		game:GetService("ReplicatedStorage").GeneralEvents.Spawn:FireServer()
-		wait(2)
-		MoneyScriptActivated.Visible = false
-		Instructions.Visible = false
+if Message:sub(1,17):lower() == ".activateautofarm" then
+	AnimalESPLoaded.Visible = false
+	AntiAFKLoaded.Visible = false
+	AntiCharDisablerLoaded.Visible = false
+	AntiLassoLoaded.Visible = false
+	CMDXLoaded.Visible = false
+	ChatBypassLoaded.Visible = false
+	BlitzkriegBrigadeUILoaded.Visible = false
+	CharacterRefreshed.Visible = false
+	Instructions.Visible = true
+	DisplayNamesRemoved.Visible = false
+	Loaded.Visible = false
+	MoneyScriptActivated.Visible = true
+	MoneyScriptLaunched.Visible = false
+	game:GetService("ReplicatedStorage").GeneralEvents.Spawn:FireServer()
+	wait(2)
+	MoneyScriptActivated.Visible = false
+	Instructions.Visible = false
 coroutine.wrap(function()
     if not getgenv then error("You need getgenv in order to execute this!",2) return end
     local a = "Made by h17s3#2734"
@@ -486,6 +498,8 @@ end
 	end
 end)
 
+-- // Anti Char Disabler
+
 Player.Chatted:Connect(function(Message)
 	if Message:sub(1,17):lower() == ".antichardisabler" then
 		AnimalESPLoaded.Visible = false
@@ -510,6 +524,8 @@ Player.Chatted:Connect(function(Message)
 end
 	end
 end)
+
+-- // Auto Farm Launcher
 
 Player.Chatted:Connect(function(Message)
 	if Message:sub(1,20):lower() == ".launchautofarm" then
@@ -557,11 +573,15 @@ end
 	end
 end)
 
+-- // Cash Popup Hider
+
 Player.Chatted:Connect(function(Message)
 	if Message:sub(1,25):lower() == ".hidecashpopup" then
 		game:GetService("Players").LocalPlayer.PlayerGui.InfoGui:Destroy()
 	end
 end)
+
+-- // Display Name Remover
 
 Player.Chatted:Connect(function(Message)
 	if Message:sub(1,26):lower() == ".removedisplaynames" then
@@ -608,6 +628,8 @@ Player.Chatted:Connect(function(Message)
 	end
 end)
 
+-- // Admin
+
 Player.Chatted:Connect(function(Message)
 	if Message:sub(1,29):lower() == ".cmdx" then
 		AnimalESPLoaded.Visible = false
@@ -628,6 +650,8 @@ Player.Chatted:Connect(function(Message)
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source", true))()
 	end
 end)
+
+-- // Blitzkrieg Brigade UI
 
 Player.Chatted:Connect(function(Message)
 	if Message:sub(1,28):lower() == ".bbui" then
@@ -2287,6 +2311,8 @@ Player.Chatted:Connect(function(Message)
 	end
 end)
 
+-- // Chat Bypass
+
 Player.Chatted:Connect(function(Message)
 	if Message:sub(1,105):lower() == ".chatbypass" then
 		AnimalESPLoaded.Visible = false
@@ -2308,6 +2334,8 @@ Player.Chatted:Connect(function(Message)
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/daddysyn/synergy/additional/betterbypasser",true))()
 	end
 end)
+
+-- // Anti Lasso
 
 Player.Chatted:Connect(function(Message)
 	if Message:sub(1,103):lower() == ".antilasso" then
@@ -2334,6 +2362,8 @@ Player.Chatted:Connect(function(Message)
 	end
 end)
 
+-- // Anti AFK
+
 Player.Chatted:Connect(function(Message)
 	if Message:sub(1,101):lower() == ".antiafk" then
 		AnimalESPLoaded.Visible = false
@@ -2355,6 +2385,8 @@ Player.Chatted:Connect(function(Message)
 	end
 end)
 
+-- // Char Refresher
+
 Player.Chatted:Connect(function(Message)
 	if Message:sub(1,99):lower() == ".refreshchar" then
 		AnimalESPLoaded.Visible = false
@@ -2375,6 +2407,8 @@ Player.Chatted:Connect(function(Message)
 game.ReplicatedStorage.GeneralEvents.Spawn:FireServer()
 	end
 end)
+
+-- // Animal ESP
 
 Player.Chatted:Connect(function(Message)
 	if Message:sub(1,100):lower() == ".animalesp" then
@@ -2420,3 +2454,545 @@ Player.Chatted:Connect(function(Message)
 		end
 	end
 end)
+
+Player.Chatted:Connect(function(Message)
+	if Message:sub(1,125):lower() == ".wolvesui" then
+
+--[[
+
+               BLITZKRIEG BRIGADE
+        
+		     discord.gg/ADXM53CK3G
+		
+				   Wolves UI
+
+                   RECREATED
+
+                     V1.0
+
+ Made by r_apt, Recreated by the BLITZKRIEG BRIGADE
+
+
+]]
+
+local Menu1 = Instance.new("ScreenGui")
+local ImageLabel = Instance.new("ImageLabel")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local TextLabel = Instance.new("TextLabel")
+local ButtonsGunMods = Instance.new("ImageButton")
+local TextLabel_2 = Instance.new("TextLabel")
+local ButtonsAutoBuySell = Instance.new("ImageButton")
+local TextLabel_3 = Instance.new("TextLabel")
+local TextLabel_4 = Instance.new("TextLabel")
+local ButtonsAutoHeal = Instance.new("ImageButton")
+local TextLabel_5 = Instance.new("TextLabel")
+local TextLabel_6 = Instance.new("TextLabel")
+local ButtonsShopBoxes = Instance.new("ImageButton")
+local TextLabel_7 = Instance.new("TextLabel")
+local TextLabel_8 = Instance.new("TextLabel")
+local ButtonsBreakWindow = Instance.new("ImageButton")
+local TextLabel_9 = Instance.new("TextLabel")
+local TextLabel_10 = Instance.new("TextLabel")
+local ImageLabel_2 = Instance.new("ImageLabel")
+local TextLabel_11 = Instance.new("TextLabel")
+local ImageLabel_3 = Instance.new("ImageLabel")
+local Menu2 = Instance.new("TextLabel")
+
+-- Properties
+
+Menu1.Name = "Menu1"
+Menu1.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Menu1.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Menu1.ResetOnSpawn = false
+
+ImageLabel.Parent = Menu1
+ImageLabel.BackgroundColor3 = Color3.new(0.388235, 0.192157, 0)
+ImageLabel.BackgroundTransparency = 1
+ImageLabel.Position = UDim2.new(0.8984465, 0, 0.251414806, 0)
+ImageLabel.Size = UDim2.new(0, 126, 0, 138)
+ImageLabel.Image = "rbxassetid://6496473447"
+ImageLabel.ImageColor3 = Color3.new(0.407843, 0.25098, 0.0352941)
+ImageLabel.ImageTransparency = 0.11999999731779099
+ImageLabel.ScaleType = Enum.ScaleType.Slice
+ImageLabel.SliceCenter = Rect.new(35, 35, 60, 60)
+
+ScrollingFrame.Parent = ImageLabel
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.new(1, 1, 1)
+ScrollingFrame.BackgroundTransparency = 1
+ScrollingFrame.Position = UDim2.new(0.0856391042, 0, 0.115445785, 0)
+ScrollingFrame.Size = UDim2.new(0, 123, 0, 122)
+ScrollingFrame.ScrollBarThickness = 6
+
+TextLabel.Parent = ScrollingFrame
+TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel.BackgroundTransparency = 1
+TextLabel.Position = UDim2.new(0.120940022, 0, 0.0124888718, 0)
+TextLabel.Size = UDim2.new(0, 78, 0, 18)
+TextLabel.Font = Enum.Font.SourceSansItalic
+TextLabel.Text = "Gun Mods"
+TextLabel.TextColor3 = Color3.new(0.901961, 0.568627, 0.211765)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14
+TextLabel.TextStrokeTransparency = 0
+TextLabel.TextWrapped = true
+
+ButtonsGunMods.Name = "Buttons['Gun Mods']"
+ButtonsGunMods.Parent = ScrollingFrame
+ButtonsGunMods.BackgroundColor3 = Color3.new(0.972549, 0.972549, 0.972549)
+ButtonsGunMods.BackgroundTransparency = 1
+ButtonsGunMods.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+ButtonsGunMods.Position = UDim2.new(0.0644912124, 0, 0.0757306069, 0)
+ButtonsGunMods.Size = UDim2.new(0, 87, 0, 34)
+ButtonsGunMods.Image = "rbxassetid://6496473447"
+ButtonsGunMods.ImageColor3 = Color3.new(0.552941, 0.411765, 0.0509804)
+ButtonsGunMods.ScaleType = Enum.ScaleType.Slice
+ButtonsGunMods.SliceCenter = Rect.new(35, 35, 60, 60)
+
+TextLabel_2.Parent = ButtonsGunMods
+TextLabel_2.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_2.BackgroundTransparency = 1
+TextLabel_2.Position = UDim2.new(0, 0, 0.0503216907, 0)
+TextLabel_2.Size = UDim2.new(0, 87, 0, 30)
+TextLabel_2.Font = Enum.Font.SourceSansItalic
+TextLabel_2.Text = "Disabled"
+TextLabel_2.TextColor3 = Color3.new(1, 1, 1)
+TextLabel_2.TextSize = 20
+TextLabel_2.TextStrokeTransparency = 0
+TextLabel_2.TextWrapped = true
+
+ButtonsAutoBuySell.Name = "Buttons['Auto Buy/ Sell']"
+ButtonsAutoBuySell.Parent = ScrollingFrame
+ButtonsAutoBuySell.BackgroundColor3 = Color3.new(0.972549, 0.972549, 0.972549)
+ButtonsAutoBuySell.BackgroundTransparency = 1
+ButtonsAutoBuySell.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+ButtonsAutoBuySell.Position = UDim2.new(0.0644912124, 0, 0.260513216, 0)
+ButtonsAutoBuySell.Size = UDim2.new(0, 87, 0, 34)
+ButtonsAutoBuySell.Image = "rbxassetid://6496473447"
+ButtonsAutoBuySell.ImageColor3 = Color3.new(0.552941, 0.411765, 0.0509804)
+ButtonsAutoBuySell.ScaleType = Enum.ScaleType.Slice
+ButtonsAutoBuySell.SliceCenter = Rect.new(35, 35, 60, 60)
+
+TextLabel_3.Parent = ButtonsAutoBuySell
+TextLabel_3.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_3.BackgroundTransparency = 1
+TextLabel_3.Position = UDim2.new(0, 0, 0.0503216907, 0)
+TextLabel_3.Size = UDim2.new(0, 87, 0, 30)
+TextLabel_3.Font = Enum.Font.SourceSansItalic
+TextLabel_3.Text = "Disabled"
+TextLabel_3.TextColor3 = Color3.new(1, 1, 1)
+TextLabel_3.TextSize = 20
+TextLabel_3.TextStrokeTransparency = 0
+TextLabel_3.TextWrapped = true
+
+TextLabel_4.Parent = ScrollingFrame
+TextLabel_4.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_4.BackgroundTransparency = 1
+TextLabel_4.Position = UDim2.new(0.120940022, 0, 0.197271481, 0)
+TextLabel_4.Size = UDim2.new(0, 78, 0, 18)
+TextLabel_4.Font = Enum.Font.SourceSansItalic
+TextLabel_4.Text = "Auto Buy/Sell"
+TextLabel_4.TextColor3 = Color3.new(0.901961, 0.568627, 0.211765)
+TextLabel_4.TextScaled = true
+TextLabel_4.TextSize = 14
+TextLabel_4.TextStrokeTransparency = 0
+TextLabel_4.TextWrapped = true
+
+ButtonsAutoHeal.Name = "Buttons['Auto Heal']"
+ButtonsAutoHeal.Parent = ScrollingFrame
+ButtonsAutoHeal.BackgroundColor3 = Color3.new(0.972549, 0.972549, 0.972549)
+ButtonsAutoHeal.BackgroundTransparency = 1
+ButtonsAutoHeal.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+ButtonsAutoHeal.Position = UDim2.new(0.0644912124, 0, 0.445295811, 0)
+ButtonsAutoHeal.Size = UDim2.new(0, 87, 0, 34)
+ButtonsAutoHeal.Image = "rbxassetid://6496473447"
+ButtonsAutoHeal.ImageColor3 = Color3.new(0.552941, 0.411765, 0.0509804)
+ButtonsAutoHeal.ScaleType = Enum.ScaleType.Slice
+ButtonsAutoHeal.SliceCenter = Rect.new(35, 35, 60, 60)
+
+TextLabel_5.Parent = ButtonsAutoHeal
+TextLabel_5.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_5.BackgroundTransparency = 1
+TextLabel_5.Position = UDim2.new(0, 0, 0.0503216907, 0)
+TextLabel_5.Size = UDim2.new(0, 87, 0, 30)
+TextLabel_5.Font = Enum.Font.SourceSansItalic
+TextLabel_5.Text = "Disabled"
+TextLabel_5.TextColor3 = Color3.new(1, 1, 1)
+TextLabel_5.TextSize = 20
+TextLabel_5.TextStrokeTransparency = 0
+TextLabel_5.TextWrapped = true
+
+TextLabel_6.Parent = ScrollingFrame
+TextLabel_6.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_6.BackgroundTransparency = 1
+TextLabel_6.Position = UDim2.new(0.120940015, 0, 0.38205409, 0)
+TextLabel_6.Size = UDim2.new(0, 78, 0, 18)
+TextLabel_6.Font = Enum.Font.SourceSansItalic
+TextLabel_6.Text = "Auto Heal"
+TextLabel_6.TextColor3 = Color3.new(0.901961, 0.568627, 0.211765)
+TextLabel_6.TextScaled = true
+TextLabel_6.TextSize = 14
+TextLabel_6.TextStrokeTransparency = 0
+TextLabel_6.TextWrapped = true
+
+ButtonsShopBoxes.Name = "Buttons['Shop Boxes']"
+ButtonsShopBoxes.Parent = ScrollingFrame
+ButtonsShopBoxes.BackgroundColor3 = Color3.new(0.972549, 0.972549, 0.972549)
+ButtonsShopBoxes.BackgroundTransparency = 1
+ButtonsShopBoxes.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+ButtonsShopBoxes.Position = UDim2.new(0.0644912124, 0, 0.63732481, 0)
+ButtonsShopBoxes.Size = UDim2.new(0, 87, 0, 34)
+ButtonsShopBoxes.Image = "rbxassetid://6496473447"
+ButtonsShopBoxes.ImageColor3 = Color3.new(0.552941, 0.411765, 0.0509804)
+ButtonsShopBoxes.ScaleType = Enum.ScaleType.Slice
+ButtonsShopBoxes.SliceCenter = Rect.new(35, 35, 60, 60)
+
+TextLabel_7.Parent = ButtonsShopBoxes
+TextLabel_7.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_7.BackgroundTransparency = 1
+TextLabel_7.Position = UDim2.new(0, 0, 0.0503216907, 0)
+TextLabel_7.Size = UDim2.new(0, 87, 0, 30)
+TextLabel_7.Font = Enum.Font.SourceSansItalic
+TextLabel_7.Text = "Disabled"
+TextLabel_7.TextColor3 = Color3.new(1, 1, 1)
+TextLabel_7.TextSize = 20
+TextLabel_7.TextStrokeTransparency = 0
+TextLabel_7.TextWrapped = true
+
+TextLabel_8.Parent = ScrollingFrame
+TextLabel_8.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_8.BackgroundTransparency = 1
+TextLabel_8.Position = UDim2.new(0.120940015, 0, 0.57408309, 0)
+TextLabel_8.Size = UDim2.new(0, 78, 0, 18)
+TextLabel_8.Font = Enum.Font.SourceSansItalic
+TextLabel_8.Text = "Shop Boxes"
+TextLabel_8.TextColor3 = Color3.new(0.901961, 0.568627, 0.211765)
+TextLabel_8.TextScaled = true
+TextLabel_8.TextSize = 14
+TextLabel_8.TextStrokeTransparency = 0
+TextLabel_8.TextWrapped = true
+
+ButtonsBreakWindow.Name = "Buttons['Break Window']"
+ButtonsBreakWindow.Parent = ScrollingFrame
+ButtonsBreakWindow.BackgroundColor3 = Color3.new(0.972549, 0.972549, 0.972549)
+ButtonsBreakWindow.BackgroundTransparency = 1
+ButtonsBreakWindow.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+ButtonsBreakWindow.Position = UDim2.new(0.0644912124, 0, 0.822107434, 0)
+ButtonsBreakWindow.Size = UDim2.new(0, 87, 0, 34)
+ButtonsBreakWindow.Image = "rbxassetid://6496473447"
+ButtonsBreakWindow.ImageColor3 = Color3.new(0.552941, 0.411765, 0.0509804)
+ButtonsBreakWindow.ScaleType = Enum.ScaleType.Slice
+ButtonsBreakWindow.SliceCenter = Rect.new(35, 35, 60, 60)
+
+TextLabel_9.Parent = ButtonsBreakWindow
+TextLabel_9.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_9.BackgroundTransparency = 1
+TextLabel_9.Position = UDim2.new(0, 0, 0.0503216907, 0)
+TextLabel_9.Size = UDim2.new(0, 87, 0, 30)
+TextLabel_9.Font = Enum.Font.SourceSansItalic
+TextLabel_9.Text = "Break"
+TextLabel_9.TextColor3 = Color3.new(1, 1, 1)
+TextLabel_9.TextSize = 20
+TextLabel_9.TextStrokeTransparency = 0
+TextLabel_9.TextWrapped = true
+
+TextLabel_10.Parent = ScrollingFrame
+TextLabel_10.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_10.BackgroundTransparency = 1
+TextLabel_10.Position = UDim2.new(0.120940015, 0, 0.758865714, 0)
+TextLabel_10.Size = UDim2.new(0, 78, 0, 18)
+TextLabel_10.Font = Enum.Font.SourceSansItalic
+TextLabel_10.Text = "Break Windows"
+TextLabel_10.TextColor3 = Color3.new(0.901961, 0.568627, 0.211765)
+TextLabel_10.TextScaled = true
+TextLabel_10.TextSize = 14
+TextLabel_10.TextStrokeTransparency = 0
+TextLabel_10.TextWrapped = true
+
+ImageLabel_2.Parent = ImageLabel
+ImageLabel_2.BackgroundColor3 = Color3.new(0.388235, 0.192157, 0)
+ImageLabel_2.BackgroundTransparency = 1
+ImageLabel_2.Position = UDim2.new(0.072842069, 0, -0.325867921, 0)
+ImageLabel_2.Size = UDim2.new(0, 106, 0, 52)
+ImageLabel_2.Image = "rbxassetid://6496473447"
+ImageLabel_2.ImageColor3 = Color3.new(0.407843, 0.25098, 0.0352941)
+ImageLabel_2.ScaleType = Enum.ScaleType.Slice
+ImageLabel_2.SliceCenter = Rect.new(35, 35, 60, 60)
+
+TextLabel_11.Parent = ImageLabel_2
+TextLabel_11.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_11.BackgroundTransparency = 1
+TextLabel_11.Position = UDim2.new(-0.0591453686, 0, 0.167643666, 0)
+TextLabel_11.Size = UDim2.new(0, 120, 0, 33)
+TextLabel_11.Font = Enum.Font.SourceSansItalic
+TextLabel_11.Text = "Wolves UI  RECREATED"
+TextLabel_11.TextColor3 = Color3.new(1, 1, 1)
+TextLabel_11.TextScaled = true
+TextLabel_11.TextSize = 14
+TextLabel_11.TextStrokeTransparency = 0
+TextLabel_11.TextWrapped = true
+
+ImageLabel_3.Parent = ImageLabel
+ImageLabel_3.BackgroundColor3 = Color3.new(0.388235, 0.192157, 0)
+ImageLabel_3.BackgroundTransparency = 1
+ImageLabel_3.Position = UDim2.new(0.0728420615, 0, 0.996341228, 0)
+ImageLabel_3.Size = UDim2.new(0, 106, 0, 56)
+ImageLabel_3.Image = "rbxassetid://6496473447"
+ImageLabel_3.ImageColor3 = Color3.new(0.580392, 0.439216, 0.101961)
+ImageLabel_3.ImageTransparency = 0.20000000298023224
+ImageLabel_3.ScaleType = Enum.ScaleType.Slice
+ImageLabel_3.SliceCenter = Rect.new(35, 35, 60, 60)
+
+Menu2.Name = "Menu[2]"
+Menu2.Parent = ImageLabel_3
+Menu2.BackgroundColor3 = Color3.new(1, 1, 1)
+Menu2.BackgroundTransparency = 1
+Menu2.Position = UDim2.new(0.155547515, 0, 0.236240387, 0)
+Menu2.Size = UDim2.new(0, 75, 0, 29)
+Menu2.Font = Enum.Font.SourceSansItalic
+Menu2.Text = "Ungodded"
+Menu2.TextColor3 = Color3.new(1, 1, 1)
+Menu2.TextScaled = true
+Menu2.TextSize = 14
+Menu2.TextStrokeTransparency = 0
+Menu2.TextWrapped = true
+
+-- Variables
+local Players = game:GetService('Players')
+local UserInputService = game:GetService('UserInputService')
+local RunService = game:GetService('RunService')
+local Player = Players.LocalPlayer
+
+local AutoBuyEnabled = false
+local GodModeEnabled = false
+local AutoHealEnabled = false
+local BoxesEnabled = false
+local CurrentShop = ''
+local ShopBoxes = {}
+
+-- Global Functions
+local function BreakWindow()
+	for _,Window in pairs(game.ReplicatedStorage.ContextStreaming:GetChildren()) do
+		if Window.Name == 'Window' and game.Players.LocalPlayer.TeamColor ~= BrickColor.New('Bright red') then
+			if Window.Part.Transparency == 0.5 then
+				game:GetService("ReplicatedStorage").GeneralEvents.WindowBreak:FireServer(Window)
+			end
+		end
+	end
+end
+
+local function SetMods(Mods)
+	for _, Gun in pairs(require(game:GetService("ReplicatedStorage").GunScripts.GunStats)) do
+		for Prop, Value in pairs(Mods) do
+			if Gun[Prop] then
+				Gun[Prop] = Value
+			end
+		end
+	end
+end
+
+-- Element Functions
+ButtonsGunMods.MouseButton1Click:Connect(function()
+	local Mods = {
+		FanFire = true, 
+		camShakeResist = 0, 
+		Spread = 0, 
+		prepTime = 0, 
+		equipTime = 0, 
+		ReloadAnimationSpeed = 0,
+		ReloadSpeed = 0, 
+		HipFireAccuracy = 0, 
+		ZoomAccuracy = 0, 
+		InstantFireAnimation = true
+	}
+
+	SetMods(Mods)
+
+	ButtonsGunMods.TextLabel.Text = 'Enabled'
+end)
+
+ButtonsAutoBuySell.MouseButton1Click:Connect(function()
+	if AutoBuyEnabled then
+		AutoBuyEnabled = false
+		ButtonsAutoBuySell.TextLabel.Text = 'Disabled'
+	else
+		AutoBuyEnabled = true
+		ButtonsAutoBuySell.TextLabel.Text = 'Enabled'
+	end	
+end)
+
+ButtonsAutoHeal.MouseButton1Click:Connect(function()
+	if AutoHealEnabled then
+		AutoHealEnabled = false
+		ButtonsAutoHeal.TextLabel.Text = 'Disabled'
+	else
+		AutoHealEnabled = true
+		ButtonsAutoHeal.TextLabel.Text = 'Enabled'
+	end			
+end)
+
+ButtonsBreakWindow.MouseButton1Click:Connect(function()
+	spawn(function()
+		BreakWindow()
+		wait(0.1)
+		BreakWindow()
+		wait(0.1)
+		BreakWindow()
+		wait(0.1)
+		BreakWindow()
+		wait(0.1)
+	end)
+end)
+
+ButtonsShopBoxes.MouseButton1Click:Connect(function()
+	if BoxesEnabled then
+		BoxesEnabled = false
+		ButtonsShopBoxes.TextLabel.Text = 'Disabled'
+		for _,Box in pairs(ShopBoxes) do
+			Box.Transparency = 1
+		end
+	else
+		BoxesEnabled = true
+		ButtonsShopBoxes.TextLabel.Text = 'Enabled'
+		if not ShopBoxes[1] then
+			for _,Shop in pairs(workspace.Shops:GetChildren()) do
+				local Part = Instance.new('Part')
+				Part.Anchored = true
+				Part.Color = Color3.fromRGB(255, 0, 0)
+				Part.CanCollide = false
+				Part.Transparency = 0.9
+				Part.Size = Vector3.new(15, 15, 15)
+				Part.Position = Shop.Head.ShopPart.Position
+				Part.Rotation = Shop.Head.ShopPart.Rotation
+				table.insert(ShopBoxes, Part)
+				Part.Parent = Shop.Head.ShopPart
+			end
+		end
+		for _,Box in pairs(ShopBoxes) do
+			Box.Transparency = 0.9
+		end
+	end
+end)
+
+-- Character Check
+Player.CharacterAdded:Connect(function()
+	wait(0.5)
+
+	game:GetService("ReplicatedStorage").GeneralEvents.CustomizeCharacter:InvokeServer("Shopping", false)
+
+
+	game.Players.LocalPlayer.Character.Head.NameTag:Destroy()
+
+	Player.Character.Humanoid.Died:Connect(function()
+		Menu2.Text = 'Ungodded'
+		GodModeEnabled = false
+	end)
+end)
+
+UserInputService.InputBegan:Connect(function(Input, GameProcessed)
+	if not GameProcessed then
+		if Input.KeyCode == Enum.KeyCode.Z then
+			if GodModeEnabled then
+				GodModeEnabled = false
+				Menu2.Text = 'Ungodded'
+				game:GetService("ReplicatedStorage").GeneralEvents.CustomizeCharacter:InvokeServer("Shopping", false)
+			else
+				game:GetService("ReplicatedStorage").GeneralEvents.CustomizeCharacter:InvokeServer("Shopping", true)
+
+				if game.Players.LocalPlayer.Character:FindFirstChild('ForceField') then
+					GodModeEnabled = true
+					Menu2.Text = 'Godded'
+
+					game.Players.LocalPlayer.Character.ForceField.Visible = false
+					Player.StateConfig:WaitForChild('CharacterDisabled').Value = false
+				else
+					Menu2.Text = 'No Shop Nearby'
+
+					wait(1.5)
+
+					Menu2.Text = 'Ungodded'
+				end
+			end
+		end
+	end
+end)
+
+-- Loop
+RunService.RenderStepped:Connect(function()
+	local Humanoid = Player.Character:FindFirstChild('Humanoid')
+	if Humanoid then
+		local X, Z = 0, 0
+
+		if UserInputService:IsKeyDown(Enum.KeyCode.W) then
+			Z += -1
+		end
+
+		if UserInputService:IsKeyDown(Enum.KeyCode.A) then
+			X += -1
+		end
+
+		if UserInputService:IsKeyDown(Enum.KeyCode.S) then
+			Z += 1
+		end
+
+		if UserInputService:IsKeyDown(Enum.KeyCode.D) then
+			X += 1
+		end
+
+		Humanoid:Move(Vector3.new(X, 0, Z), true)
+	end
+
+	if AutoBuyEnabled then
+		for _,Shop in pairs(workspace.Shops:GetChildren()) do
+			local Magnitude = (Shop.HumanoidRootPart.Position - Player.Character.HumanoidRootPart.Position).Magnitude
+			if CurrentShop ~= Shop.Name and Magnitude <= 15 then
+				CurrentShop = Shop.Name
+				game:GetService("ReplicatedStorage").GeneralEvents.BuyItem:InvokeServer("PistolAmmo",true)
+				game:GetService("ReplicatedStorage").GeneralEvents.BuyItem:InvokeServer("RifleAmmo",true)
+				game:GetService("ReplicatedStorage").GeneralEvents.BuyItem:InvokeServer("ShotgunAmmo",true)
+				game:GetService("ReplicatedStorage").GeneralEvents.BuyItem:InvokeServer("Dynamite",true)
+				game:GetService("ReplicatedStorage").GeneralEvents.BuyItem:InvokeServer("SniperAmmo",true)
+				game:GetService("ReplicatedStorage").GeneralEvents.BuyItem:InvokeServer("BIG Dynamite",true)
+				game:GetService("ReplicatedStorage").GeneralEvents.BuyItem:InvokeServer("Health Potion",true)
+				game:GetService("ReplicatedStorage").GeneralEvents.Inventory:InvokeServer("Sell")
+			elseif CurrentShop == Shop.Name and Magnitude > 15 then
+				CurrentShop = ''
+			end
+		end
+	end
+
+	if AutoHealEnabled then
+		local Character = workspace:FindFirstChild(Player.Name)
+
+		if Character then
+			if Character.Humanoid.Health <= 35 and Character.Humanoid.Health > 0 then
+				game:GetService("Players").LocalPlayer.Backpack["Health Potion"].DrinkPotion:InvokeServer()
+			end
+		end
+	end
+
+	if GodModeEnabled then
+		if not game.Players.LocalPlayer.Character:FindFirstChild('ForceField') then
+
+			wait(0.2)
+
+			if not game.Players.LocalPlayer.Character:FindFirstChild('ForceField') then
+				GodModeEnabled = false
+				Menu2.Text = 'Ungodded'
+			end
+		end
+	end
+end)
+
+UserInputService.InputBegan:Connect(function(Input)
+	if Input.KeyCode == Enum.KeyCode.Space then
+		local Humanoid = Player.Character:FindFirstChild('Humanoid')
+		if Humanoid then
+			Humanoid.Jump = true
+		end
+	end
+end)
+	end
+end)
+
+--
