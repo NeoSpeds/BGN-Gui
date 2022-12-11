@@ -1,6 +1,6 @@
 --
 
--- // Blitzkrieg Brigade Commands V1.0
+-- // Blitzkrieg Brigade Commands V2.0
 
 -- // UI
 
@@ -64,7 +64,7 @@ Loaded.Position = UDim2.new(0.186560571, 0, 0.857041895, 0)
 Loaded.Size = UDim2.new(0, 378, 0, 110)
 Loaded.Visible = false
 Loaded.Font = Enum.Font.SourceSansItalic
-Loaded.Text = "Made by the Blitzkrieg Brigade discord.gg/ADXM53CK3G"
+Loaded.Text = "Made by the Blitzkrieg Brigade discord.gg/2kFVVQYPGp"
 Loaded.TextColor3 = Color3.new(1, 1, 1)
 Loaded.TextScaled = true
 Loaded.TextSize = 14
