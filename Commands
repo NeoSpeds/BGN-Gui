@@ -427,10 +427,8 @@ TextLabel_13.Draggable = true
 local Player = game:GetService("Players").LocalPlayer
 
 Loaded.Visible = true
-Instructions.Visible = true
 wait(2)
 Loaded.Visible = false
-Instructions.Visible = false
 
 Close.MouseButton1Click:Connect(function()
 Commands.Visible = false
